@@ -1,0 +1,5 @@
+{
+  "include": ["src", "tests"],
+  "exclude": ["vendor"],
+  "extraPaths": ["src", "vendor/seeding"]
+}

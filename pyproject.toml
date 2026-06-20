@@ -1,0 +1,57 @@
+[project]
+name = "storyscape"
+version = "0.1.0"
+description = "Local audiobook task service for chapter parsing and LLM text annotation."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.12.0",
+    "EbookLib>=0.18",
+    "fastapi>=0.115.0",
+    "httpx>=0.28.0",
+    "json-repair>=0.30.0",
+    "loguru>=0.7.0",
+    "openai>=1.0.0",
+    "pydantic>=2.8.0",
+    "pydantic-settings>=2.4.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.0",
+    "uvicorn>=0.30.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.10.0",
+    "pyright>=1.1.360",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+storyscape-api = "storyscape.main:run"
+storyscape-worker = "storyscape.workers.local_worker:run"
+storyscape-inspect = "storyscape.scripts.inspect:run"
+
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src", "vendor/seeding"]
+include = ["storyscape*", "seed_ai*", "seed_agent*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "vendor/seeding"]
+testpaths = ["tests"]
+
+[tool.mypy]
+files = ["src", "tests"]
+mypy_path = ["src", "vendor/seeding"]
+
+[[tool.mypy.overrides]]
+module = ["ebooklib.*", "yaml"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["seed_ai.*"]
+follow_imports = "skip"

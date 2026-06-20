@@ -16,6 +16,10 @@ dist/
 .env
 
 data/
+logs/
 
 vendor/seeding/**/__pycache__/
 vendor/seeding/**/.DS_Store
+
+ai_go/
+samples/
