@@ -1,0 +1,8 @@
+fastapi==0.136.1
+httpx==0.28.1
+json_repair==0.59.4
+loguru==0.7.3
+openai==2.32.0
+pydantic==2.13.3
+python-dotenv==1.2.2
+uvicorn==0.46.0

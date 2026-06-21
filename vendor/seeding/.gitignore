@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.pyc
+.git/
+.vscode/
+
+# 环境变量文件
+.env
+
+# 运行时数据目录
+data/
+pi_runtime/
+work/
+
+.claude-trace/
+.trae/
+build/
+seed_agent.egg-info/
+skills/
