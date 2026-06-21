@@ -26,6 +26,11 @@ dev = [
     "pytest>=8.0.0",
     "pytest-asyncio>=0.23.0",
 ]
+tts = [
+    "qwen-tts>=0.1.1",
+    "torch>=2.4.0",
+    "soundfile>=0.12.0",
+]
 
 [project.scripts]
 storyscape-api = "storyscape.main:run"

@@ -56,7 +56,7 @@ class OpenRouterCompletionsStreamOptions(BaseModel):
     # 插件配置列表，目前好像用不上，暂时不学习配置 # Todo
     # plugins: list[Plugin] | None = None
     # 推理配置，用于控制推理模型的行为
-    reasoning: ReasoningConfig | None = None
+    reasoning: ReasoningConfig | dict | None = None
     # 路由选项，控制请求路由行为
     route: dict[str, object] | None = None
     # 服务层级，用于控制请求处理优先级

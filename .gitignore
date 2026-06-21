@@ -23,3 +23,15 @@ vendor/seeding/**/.DS_Store
 
 ai_go/
 samples/
+
+.agents/
+.claude/
+.vscode/
+
+
+.run-install.ps1
+.uv-install.err
+.uv-install.log
+.uv-install.out
+
+*.wav
