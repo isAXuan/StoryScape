@@ -49,10 +49,11 @@ def parse_roles(text: str) -> list[dict]:
         if not isinstance(item, dict):
             continue
         role = str(item.get('role', '')).strip()
+        gender = str(item.get('gender', '')).strip()
         if not role or role in seen:
             continue
         seen.add(role)
-        ordered.append({'role': role, 'anchor_name': []})
+        ordered.append({'role': role, 'gender': gender, 'anchor_name': []})
     return ordered
 
 

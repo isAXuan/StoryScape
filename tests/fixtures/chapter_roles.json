@@ -1,34 +1,37 @@
 [
   {
     "role": "旁白",
+    "gender": "男",
     "anchor_name": []
   },
   {
     "role": "楚環",
+    "gender": "女",
     "anchor_name": []
   },
   {
-    "role": "楚淵",
-    "anchor_name": []
-  },
-  {
-    "role": "礼官",
+    "role": "楚渊",
+    "gender": "男",
     "anchor_name": []
   },
   {
     "role": "明恪",
+    "gender": "男",
     "anchor_name": []
   },
   {
-    "role": "苍王龙<0xE8><0xB0><0xA1>",
+    "role": "龙<0xE8><0xB0><0xA1>",
+    "gender": "男",
     "anchor_name": []
   },
   {
     "role": "司徒启明",
+    "gender": "男",
     "anchor_name": []
   },
   {
     "role": "李承钦",
+    "gender": "男",
     "anchor_name": []
   }
 ]
